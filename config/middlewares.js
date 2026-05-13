@@ -7,9 +7,9 @@ module.exports = ({env})=> [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:', env('CDN_URL')], // <--- Allow images from CDN],
-          'img-src': ["'self'", 'data:', 'blob:', 'portfolio-mdx.s3.ap-southeast-1.amazonaws.com', env('CDN_URL')],
-          'media-src': ["'self'", 'data:', 'blob:', 'portfolio-mdx.s3.ap-southeast-1.amazonaws.com', env('CDN_URL')],
+          'connect-src': ["'self'", 'https:'], // <--- Allow images from CDN],
+          'img-src': ["'self'", 'data:', 'blob:', 'portfolio-mdx.s3.ap-southeast-1.amazonaws.com', 'asset.limstudio.work'],
+          'media-src': ["'self'", 'data:', 'blob:', 'portfolio-mdx.s3.ap-southeast-1.amazonaws.com', 'asset.limstudio.work'],
           upgradeInsecureRequests: null,
         },
       },
