@@ -7,9 +7,9 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'portfolio-mdx.s3.ap-southeast-1.amazonaws.com'],
-          'media-src': ["'self'", 'data:', 'blob:', 'portfolio-mdx.s3.ap-southeast-1.amazonaws.com'],
+          'connect-src': ["'self'", 'https:', env('CDN_URL')], // <--- Allow images from CDN],
+          'img-src': ["'self'", 'data:', 'blob:', 'portfolio-mdx.s3.ap-southeast-1.amazonaws.com', env('CDN_URL')],
+          'media-src': ["'self'", 'data:', 'blob:', 'portfolio-mdx.s3.ap-southeast-1.amazonaws.com', env('CDN_URL')],
           upgradeInsecureRequests: null,
         },
       },
