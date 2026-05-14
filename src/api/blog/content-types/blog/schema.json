@@ -24,6 +24,10 @@
         "videos",
         "audios"
       ]
+    },
+    "Content": {
+      "type": "blocks",
+      "required": true
     }
   }
 }
