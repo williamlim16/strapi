@@ -515,18 +515,19 @@ export interface ApiEducationEducation extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.Blocks & Schema.Attribute.Required;
-    From: Schema.Attribute.Date & Schema.Attribute.Required;
+    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    from: Schema.Attribute.Date & Schema.Attribute.Required;
+    institution: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::education.education'
     > &
       Schema.Attribute.Private;
-    Location: Schema.Attribute.String & Schema.Attribute.Required;
-    Name: Schema.Attribute.String & Schema.Attribute.Required;
+    location: Schema.Attribute.String & Schema.Attribute.Required;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    To: Schema.Attribute.Date;
+    to: Schema.Attribute.Date;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

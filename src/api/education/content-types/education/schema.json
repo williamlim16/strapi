@@ -11,23 +11,27 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "Location": {
+    "location": {
       "type": "string",
       "required": true
     },
-    "Description": {
+    "description": {
       "type": "blocks",
       "required": true
     },
-    "From": {
+    "institution": {
+      "type": "string",
+      "required": true
+    },
+    "from": {
       "type": "date",
       "required": true
     },
-    "To": {
+    "to": {
       "type": "date"
     }
   }
